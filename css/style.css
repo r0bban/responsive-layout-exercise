@@ -1,3 +1,78 @@
 :root {
     font-family: 'Ubuntu', sans-serif;
 }
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.grid-container {
+    display: grid;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: goldenrod;
+    grid-template-columns: min-content auto min-content;
+    grid-template-rows: min-content minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto);
+    grid-template-areas:
+    "logo nav cta"
+    "header header header"
+    "products products products"
+    "clients clients clients"
+    "footer footer footer"
+}
+
+aside.logo {
+    grid-area: logo;
+    background: #f2f5f7;
+    min-width: 100px;
+    /* display: flex; */
+}
+
+nav {
+    grid-area: nav;
+    background: #f2f5f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 5rem;
+    padding-left: 5rem;
+}
+
+nav a, nav a:visited, nav a:hover, nav a:active {
+        font-family: arial;
+        font-size: 0.8em;
+        /* text-align: right; */
+        font-weight: bold;
+        color: #505d68;
+        /* margin-top: 0.8rem;
+        margin-bottom: 0.8rem; */
+        text-decoration: none;
+        /* display: inline-block; */
+        margin: 0 1rem 0 1rem;
+}
+
+aside.cta {
+    grid-area: cta;
+    background: #f2f5f7;
+}
+
+header {
+    grid-area: header;
+}
+
+section.products {
+    grid-area: products;
+    background: lightgray;
+}
+
+section.clients {
+    grid-area: clients;
+    background: cadetblue;
+}
+
+footer {
+    grid-area: footer;
+    background: crimson;
+}
